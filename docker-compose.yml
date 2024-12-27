@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  app:
+    image: gotodo
+    build:
+      args:
+        - target=dev
+    ports:
+      - "18000:80"
+    volumes:
+      - .:/app

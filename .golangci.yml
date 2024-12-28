@@ -10,7 +10,7 @@ linters:
   disable-all: true
   enable:
     - goimports
-    - dea
+    - deadcode
     - errcheck
     - gocognit
     - gocritic

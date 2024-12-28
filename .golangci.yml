@@ -1,0 +1,21 @@
+liters-settings:
+  govet:
+    check-shadowing: true
+  gocyclo:
+    min-complexity: 30
+  misspell:
+    locale: US
+
+linters:
+  disable-all: true
+  enable:
+    - goimports
+    - dea
+    - errcheck
+    - gocognit
+    - gocritic
+    - gocyclo
+    - gofmt
+    - misspell
+    - staticcheck
+    - whitespace

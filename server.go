@@ -26,7 +26,7 @@ func NewServer(l net.Listener, mux http.Handler) *Server {
 	}
 }
 
-func (s *Server) run(ctx context.Context) error {
+func (s *Server) Run(ctx context.Context) error {
 	ctx, stop := signal.NotifyContext(ctx, os.Interrupt, syscall.SIGTERM)
 	defer stop()
 	eg, ctx := errgroup.WithContext(ctx)

@@ -8,7 +8,6 @@ import (
 )
 
 func TestNewMux(t *testing.T) {
-	t.Skip("TODO: implement me")
 	w := httptest.NewRecorder()
 	r := httptest.NewRequest(http.MethodGet, "/health", nil)
 	sut := NewMux()

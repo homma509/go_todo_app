@@ -13,7 +13,6 @@ import (
 )
 
 func TestAddTask(t *testing.T) {
-	t.Skip("skip test")
 	t.Parallel()
 	type want struct {
 		status  int

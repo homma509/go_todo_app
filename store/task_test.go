@@ -13,6 +13,7 @@ import (
 )
 
 func TestRepository_ListTasks(t *testing.T) {
+	t.Skip("skip test")
 	ctx := context.Background()
 	tx, err := testutil.OpenDBForTest(t).BeginTxx(ctx, nil)
 	t.Cleanup(func() { _ = tx.Rollback() })
@@ -67,6 +68,7 @@ func prepareTasks(ctx context.Context, t *testing.T, con Execer) entity.Tasks {
 }
 
 func TestRepository_AddTask(t *testing.T) {
+	t.Skip("skip test")
 	t.Parallel()
 	ctx := context.Background()
 

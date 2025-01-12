@@ -13,6 +13,7 @@ require (
 	github.com/go-sql-driver/mysql v1.8.1
 	github.com/google/go-cmp v0.6.0
 	github.com/jmoiron/sqlx v1.4.0
+	golang.org/x/crypto v0.32.0
 )
 
 require (

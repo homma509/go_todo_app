@@ -1,9 +1,11 @@
 package store
 
-var (
-// Tasks = &TaskStore{Tasks: map[entity.TaskID]*entity.Task{}}
+import "errors"
 
-// ErrTaskNotFound = errors.New("not found")
+var (
+	// Tasks = &TaskStore{Tasks: map[entity.TaskID]*entity.Task{}}
+
+	ErrNotFound = errors.New("not found")
 )
 
 // type TaskStore struct {

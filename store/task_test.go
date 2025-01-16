@@ -38,7 +38,7 @@ func prepareTasks(ctx context.Context, t *testing.T, con Execer) entity.Tasks {
 	if _, err := con.ExecContext(ctx, "DELETE FROM task;"); err != nil {
 		t.Logf("failed to initialize task: %v", err)
 	}
-	c := clock.FixedClock{}
+	c := clock.FixedClocker{}
 	wants := entity.Tasks{
 		{Title: "want task 1", Status: "todo", Created: c.Now(), Modified: c.Now()},
 		{Title: "want task 2", Status: "todo", Created: c.Now(), Modified: c.Now()},
@@ -72,7 +72,7 @@ func TestRepository_AddTask(t *testing.T) {
 	t.Parallel()
 	ctx := context.Background()
 
-	c := clock.FixedClock{}
+	c := clock.FixedClocker{}
 	var wantID int64 = 20
 	okTask := &entity.Task{
 		Title:    "ok task",

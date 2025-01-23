@@ -2,9 +2,10 @@ package handler
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 
-	"github.com/go-playground/validator"
+	"github.com/go-playground/validator/v10"
 )
 
 type Login struct {
@@ -24,6 +25,7 @@ func (l *Login) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		}, http.StatusInternalServerError)
 		return
 	}
+	fmt.Printf("body: %+v\n", body)
 	err := l.Validator.Struct(body)
 	if err != nil {
 		RespondJSON(ctx, w, &ErrResponse{

@@ -12,7 +12,6 @@ import (
 )
 
 func TestListTask(t *testing.T) {
-	t.Skip("skip test")
 	type want struct {
 		status  int
 		rspFile string
